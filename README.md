@@ -58,6 +58,9 @@ curl localhost/foo/hostname
 # should output "bar-app"
 curl localhost/bar/hostname
 ---------------------------------------------------------------------------------------------------------------------------
+Install Tekton
+k apply -f ./tekton-v0.55.0/
+---------------------------------------------------------------------------------------------------------------------------
 Tekton CLI
 As the name implies, the Tekton CLI is the CLI tool that is used to manage Tekton
 pipelines. This tool makes it easier to interact with Tekton components and is better than
