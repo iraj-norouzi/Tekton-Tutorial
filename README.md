@@ -58,6 +58,18 @@ Install Tekton
 k apply -f ./tekton-v0.55.0/
 kubectl get pods --namespace tekton-pipelines --watch
 ---------------------------------------------------------------------------------------------------------------------------
+Dashboard Link
+http://dashboard.my.ir
+
+---------------------------------------------------------------------------------------------------------------------------
+I will talk about the Task and Pipeline 
+![alt text](https://github.com/iraj-norouzi/Tekton-Tutorial/blob/main/pictures/1.png?raw=true)
+![alt text](https://github.com/iraj-norouzi/Tekton-Tutorial/blob/main/pictures/2.png?raw=true)
+![alt text](https://github.com/iraj-norouzi/Tekton-Tutorial/blob/main/pictures/3.png?raw=true)
+![alt text](https://github.com/iraj-norouzi/Tekton-Tutorial/blob/main/pictures/4.png?raw=true)
+![alt text](https://github.com/iraj-norouzi/Tekton-Tutorial/blob/main/pictures/5.png?raw=true)
+
+---------------------------------------------------------------------------------------------------------------------------
 Tekton CLI
 As the name implies, the Tekton CLI is the CLI tool that is used to manage Tekton
 pipelines. This tool makes it easier to interact with Tekton components and is better than
@@ -68,12 +80,7 @@ repository at https://github.com/tektoncd/cli.Introducing Tekton
 25
 This tool's installation instructions and usage will be covered in the next chapter of this
 book.
----------------------------------------------------------------------------------------------------------------------------
-I will talk about the Task and Pipeline 
-
-picture
-![alt text](https://github.com/iraj-norouzi/Tekton-Tutorial/pictures/main/1.jpg?raw=true)
-
+------------------------------------------------------------------------------------------------
 Tekton Triggers
 Tekton Triggers appeared as a child project of Tekton. It allows users to add a way to
 launch pipelines based on webhooks automatically. A typical use case for this would be
