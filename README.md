@@ -1,16 +1,14 @@
 # Tekton-Tutorial
 ---------------------------------------------------------------------------------------------------------------------------
-Advantages of Tekton
----------------------------------------------------------------------------------------------------------------------------
 Talking about the architect Tekton
 ---------------------------------------------------------------------------------------------------------------------------
 Prepair the environment
 ---------------------------------------------------------------------------------------------------------------------------
+https://kind.sigs.k8s.io/docs/user/quick-start/
+---------------------------------------------------------------------------------------------------------------------------
 Install Kind
 # For AMD64 / x86_64
 [ $(uname -m) = x86_64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.20.0/kind-linux-amd64
-# For ARM64
-[ $(uname -m) = aarch64 ] && curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.20.0/kind-linux-arm64
 chmod +x ./kind
 sudo mv ./kind /usr/local/bin/kind
 ---------------------------------------------------------------------------------------------------------------------------
@@ -41,13 +39,11 @@ nodes:
 
 EOF
 ---------------------------------------------------------------------------------------------------------------------------
+kubectl cluster-info --context kind-kind
+---------------------------------------------------------------------------------------------------------------------------
 Implement Ingress nginx 
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 ---------------------------------------------------------------------------------------------------------------------------
-kubectl wait --namespace ingress-nginx \
-  --for=condition=ready pod \
-  --selector=app.kubernetes.io/component=controller \
-  --timeout=90s
 ---------------------------------------------------------------------------------------------------------------------------
 Apply sample application configuration
 kubectl apply -f https://kind.sigs.k8s.io/examples/ingress/usage.yaml
@@ -60,6 +56,7 @@ curl localhost/bar/hostname
 ---------------------------------------------------------------------------------------------------------------------------
 Install Tekton
 k apply -f ./tekton-v0.55.0/
+kubectl get pods --namespace tekton-pipelines --watch
 ---------------------------------------------------------------------------------------------------------------------------
 Tekton CLI
 As the name implies, the Tekton CLI is the CLI tool that is used to manage Tekton
@@ -72,6 +69,11 @@ repository at https://github.com/tektoncd/cli.Introducing Tekton
 This tool's installation instructions and usage will be covered in the next chapter of this
 book.
 ---------------------------------------------------------------------------------------------------------------------------
+I will talk about the Task and Pipeline 
+
+picture
+![alt text](https://github.com/iraj-norouzi/Tekton-Tutorial/pictures/main/1.jpg?raw=true)
+
 Tekton Triggers
 Tekton Triggers appeared as a child project of Tekton. It allows users to add a way to
 launch pipelines based on webhooks automatically. A typical use case for this would be
