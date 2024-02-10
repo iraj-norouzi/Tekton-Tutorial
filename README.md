@@ -63,8 +63,8 @@ http://dashboard.my.ir
 
 ---------------------------------------------------------------------------------------------------------------------------
 I will talk about the Task and Pipeline 
-![alt text](https://github.com/iraj-norouzi/Tekton-Tutorial/blob/main/pictures/1.png?raw=true)
 ![alt text](https://github.com/iraj-norouzi/Tekton-Tutorial/blob/main/pictures/2.png?raw=true)
+![alt text](https://github.com/iraj-norouzi/Tekton-Tutorial/blob/main/pictures/1.png?raw=true)
 ![alt text](https://github.com/iraj-norouzi/Tekton-Tutorial/blob/main/pictures/3.png?raw=true)
 ![alt text](https://github.com/iraj-norouzi/Tekton-Tutorial/blob/main/pictures/4.png?raw=true)
 ![alt text](https://github.com/iraj-norouzi/Tekton-Tutorial/blob/main/pictures/5.png?raw=true)
